@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: OpenAPI Specifications for CMS
+  description: Testing out the new stuff
+  version: "1.0.0"
+
+paths: {}
+
+tags:
+  - name: User Management
+    description: Operations related to managing users
+  - name: Product Management
+    description: Operations related to managing products
+servers:
+  - url: https://{customDomain}/api/v1
+    description: Custom url server
+    variables:
+      customDomain:
+        default: example.com
+        description: Enter custom domain
+  - url: https://{testDomain}/api/vi
+    description: EnumFixedUrl
+    variables:
+      testDomain:
+        default: test.com
+        enum:
+          - production
+          - staging
+          - development
+
